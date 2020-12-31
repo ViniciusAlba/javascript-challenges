@@ -1,5 +1,5 @@
 function calculate(type, value) {
-    
+
     if (type === 'action') {
 
         //Conditional to clear all the screen.
@@ -19,7 +19,7 @@ function calculate(type, value) {
 
         //Putting the result on the screen.
         if (value === '=') {
-            var field_value = eval(document.getElementById('result').value);
+            var field_value = eval(document.getElementById('result').value).toFixed(9).replace(/(\.0+|0+)$/, '');
             document.getElementById('result').value = field_value;
         }
     
@@ -27,5 +27,5 @@ function calculate(type, value) {
     } else if (type === 'value') {
         document.getElementById('result').value += value;
     }
-
+    
 }
