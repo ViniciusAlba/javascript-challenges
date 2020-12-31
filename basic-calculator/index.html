@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <title>Basic Calculator</title>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css">
+
+        <!-- Normalize CSS -->
+        <link rel="stylesheet" href="normalize.css">
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <div class="calculator"> <!-- Calculator -->
+
+                        <input type="text" class="form-control screen" placeholder="0" disabled="disabled" id="result"> <!-- < Screen / > -->
+
+                        <div class="row"> <!-- First row (C, BACKSPACE, /) buttons -->
+                            <button onclick="calculate('action', 'c')" type="button" class="btn btn-light btn-lg clear"><strong>C</strong></button>
+                            <button onclick="calculate('action', 'backspace')" type="button" class="btn btn-light btn-lg"><i class="fas fa-backspace"></i></button>
+                            <button onclick="calculate('action', '/')" type="button" class="btn btn-light btn-lg"><i class="fas fa-divide"></i></button>
+                        </div> <!-- /First row -->
+                        
+                        <div class="row"> <!-- Second row (7, 8, 9, *) buttons -->
+                            <button onclick="calculate('value', 7)" type="button" class="btn btn-light btn-lg"><strong>7</strong></button>
+                            <button onclick="calculate('value', 8)" type="button" class="btn btn-light btn-lg"><strong>8</strong></button>
+                            <button onclick="calculate('value', 9)" type="button" class="btn btn-light btn-lg"><strong>9</strong></button>
+                            <button onclick="calculate('action', '*')" type="button" class="btn btn-light btn-lg"><i class="fas fa-times"></i></button>
+                        </div> <!-- /Second row -->
+
+                        <div class="row"> <!-- Third row (4, 5, 6, -) buttons -->
+                            <button onclick="calculate('value', 4)" type="button" class="btn btn-light btn-lg"><strong>4</strong></button>
+                            <button onclick="calculate('value', 5)" type="button" class="btn btn-light btn-lg"><strong>5</strong></button>
+                            <button onclick="calculate('value', 6)" type="button" class="btn btn-light btn-lg"><strong>6</strong></button>
+                            <button onclick="calculate('action', '-')" type="button" class="btn btn-light btn-lg"><i class="fas fa-minus"></i></button>
+                        </div> <!-- /Third row -->
+                        
+                        <div class="row"> <!-- Fourth row (1, 2, 3, +) buttons -->
+                            <button onclick="calculate('value', 1)" type="button" class="btn btn-light btn-lg"><strong>1</strong></button>
+                            <button onclick="calculate('value', 2)" type="button" class="btn btn-light btn-lg"><strong>2</strong></button>
+                            <button onclick="calculate('value', 3)" type="button" class="btn btn-light btn-lg"><strong>3</strong></button>
+                            <button onclick="calculate('action', '+')" type="button" class="btn btn-light btn-lg plus"><i class="fas fa-plus"></i></button>
+                        </div> <!-- /Fourth row -->
+
+                        <div class="row" style="margin-top: -60px"> <!-- Fifth row (0, . , =) buttons -->
+                            <button onclick="calculate('value', 0)" type="button" class="btn btn-light btn-lg"><strong>0</strong></button>
+                            <button onclick="calculate('action', '.')" type="button" class="btn btn-light btn-lg"><strong>.</strong></button>
+                            <button onclick="calculate('action', '=')" type="button" class="btn btn-light btn-lg"><i class="fas fa-equals"></i></button>
+                        </div> <!-- /Fifth row-->
+
+                    </div> <!-- /Calculator -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Javascript -->
+        <script src="main.js"></script>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
