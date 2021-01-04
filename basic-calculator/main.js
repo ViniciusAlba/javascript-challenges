@@ -19,7 +19,7 @@ function calculate(type, value) {
 
         //Putting the result on the screen.
         if (value === '=') {
-            var field_value = eval(document.getElementById('result').value).toFixed(9).replace(/(\.0+|0+)$/, '');
+            var field_value = eval(document.getElementById('result').value).fixed(1);
             document.getElementById('result').value = field_value;
         }
     
